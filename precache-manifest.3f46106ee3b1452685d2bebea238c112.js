@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "83efad84e79fa99c00d39e1d25aa2be2",
+    "revision": "a9b2144d1c1a700aafae21efb9898831",
     "url": "/react-food/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-food/static/css/2.0624914a.chunk.css"
   },
   {
-    "revision": "cce21f76cb41d69ba516",
+    "revision": "57735041fb0255ed386a",
     "url": "/react-food/static/css/main.1995a5c4.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-food/static/js/2.5624e2ee.chunk.js"
   },
   {
-    "revision": "cce21f76cb41d69ba516",
-    "url": "/react-food/static/js/main.ab60cd78.chunk.js"
+    "revision": "57735041fb0255ed386a",
+    "url": "/react-food/static/js/main.328ae11a.chunk.js"
   },
   {
     "revision": "1a3ae18dd78ba85f9108",
