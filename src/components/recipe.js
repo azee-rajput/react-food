@@ -69,8 +69,8 @@ class Recipe extends Component{
                     </h3>
 
                     <div className="col-sm-4 row mt-5">
-                        <h4 className = "col-sm-12 text-center"><b>Ingredients</b></h4>
-                        <div className="col-sm-12 row text-center">
+                        <h4 className = "col-sm-12"><b>Ingredients</b></h4>
+                        <div className="col-sm-12 row">
                             <div className="text-center col-4">
                                 {this.state.measuring.map((measure)=>(
                                     <p>{this.state.data[measure]}</p>

@@ -64,9 +64,9 @@ class Landing extends Component{
                 <List url="https://www.themealdb.com/api/json/v1/1/filter.php?c=Dessert" category="Dessert" sliced="4"/>
                 <List url="https://www.themealdb.com/api/json/v1/1/filter.php?c=Starter" category="Starter" sliced="4"/>
                 <List url="https://www.themealdb.com/api/json/v1/1/filter.php?c=Side" category="Side" sliced="4"/>
-
+                
                 <div className="col-sm-12" style={{textAlign:"center"}}>
-                    <Button style={{width:"10%"}} id="button" onClick={()=>this.showMore()}>Show More</Button>
+                    <Button id="button" onClick={()=>this.showMore()}>Show More</Button>
                 </div>
 
                 {this.state.isTrue ? this.state.showMore.map((more)=>(
