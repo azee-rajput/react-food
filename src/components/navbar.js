@@ -30,20 +30,20 @@ class NavbarHead extends Component{
     render(){
       return(
         <Navbar bg="primary" variant="dark" expand="lg" fixed="top">
-          <Navbar.Brand href={process.env.PUBLIC_URL+"/"}>Title</Navbar.Brand>
+          <Navbar.Brand href={process.env.PUBLIC_URL+"/#/"}>Title</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
-              <Nav.Link href={process.env.PUBLIC_URL+"/about"}>About</Nav.Link>
+              <Nav.Link href={process.env.PUBLIC_URL+"/#/about"}>About</Nav.Link>
               <NavDropdown title="Filter By" id="basic-nav-dropdown">
-                <NavDropdown.Item href={process.env.PUBLIC_URL+"/categories"}>Categories</NavDropdown.Item>
-                <NavDropdown.Item href={process.env.PUBLIC_URL+"/areas"}>Area List</NavDropdown.Item>
-                <NavDropdown.Item href={process.env.PUBLIC_URL+"/ingredients"}>Ingredients</NavDropdown.Item>
+                <NavDropdown.Item href={process.env.PUBLIC_URL+"/#/categories"}>Categories</NavDropdown.Item>
+                <NavDropdown.Item href={process.env.PUBLIC_URL+"/#/areas"}>Area List</NavDropdown.Item>
+                <NavDropdown.Item href={process.env.PUBLIC_URL+"/#/ingredients"}>Ingredients</NavDropdown.Item>
               </NavDropdown>
             </Nav>
             <Form inline>
               <FormControl type="text" placeholder="Search Recipe" className="mr-sm-2" value={this.state.search} onChange={(e)=>this.changed(e)} />
-              {this.state.enabled ? <Nav.Link href={process.env.PUBLIC_URL+"/refresh/"+this.state.search}><Button variant="outline-light">Search</Button></Nav.Link> : null}
+              {this.state.enabled ? <Nav.Link href={process.env.PUBLIC_URL+"/#/refresh/"+this.state.search}><Button variant="outline-light">Search</Button></Nav.Link> : null}
             </Form>
           </Navbar.Collapse>
         </Navbar>
