@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import List from './list';
-import Ingredients from './ingredients';
+
 
 
 class Recipe extends Component{
@@ -33,7 +33,7 @@ class Recipe extends Component{
             })
             const strData = JSON.stringify(this.state.data)
             const arrData = JSON.parse(strData)
-            const chabi = Object.keys(arrData)
+
             const valu = Object.values(arrData)
             const allIng= []
             const allmeasure=[]
@@ -45,13 +45,7 @@ class Recipe extends Component{
                 allIng.push(valu[i])
                 allmeasure.push(valu[i+20])
             }
-            // for(let i = 29; i < 51; i++){
-            //     if(valu[i] === null || valu[i]===""){
-            //         break;
-            //     }
-            //     allmeasure.push(chabi[i])            
-            // }
-            console.log(allIng);
+
             this.setState({ 
                 measuring : allmeasure,
                 ingredients : allIng
@@ -83,30 +77,15 @@ class Recipe extends Component{
     }
     
     render(){
-        
-        // const ingredients = this.state.ingredients.map((ing)=>{
-        //     return(
-        //            <tr><td>{ing}</td></tr> 
-        //     )
-        // })
-
-        // const measuring = this.state.measuring.map((measure)=>{
-        //     return(
-        //            <tr><td>{measure}</td></tr>
-        //     )
-        // })
-
-
-
         return(
             <div style={{marginTop:"2%"}}>
 
                 <div className="row shadow p-3 mb-5 bg-white rounded"
                 style={{width:"90%",margin:"auto", justifyContent:"center", border:"1px solid #d3d3d3"}}>
                     <h1 className="col-sm-12 text-center"><b>{this.state.data.strMeal}</b></h1>
-                    <h3 className="col-sm-12 text-center">
+                    <h5 className="col-sm-12 text-center">
                         <i>{this.state.data.strCategory} | {this.state.data.strArea} | {this.state.data.strTags}</i>
-                    </h3>
+                    </h5>
 
                     <div className="col-sm-4 row mt-5">
                         <div className = "col-sm-12"><h4 className="text-center"><b>Ingredients</b></h4>
