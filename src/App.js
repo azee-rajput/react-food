@@ -12,7 +12,7 @@ function App() {
   return (
     <div>
       <NavbarHead/>
-      <div className="mt-5"><Routing/></div>
+      <div className="mt-5 data"><Routing/></div>
       <Footer/>
     </div>
   );

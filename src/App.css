@@ -1,3 +1,6 @@
+.data{
+    min-height: 70vh;
+}
 .forHover:hover{
     cursor: pointer;
     text-decoration: underline;
