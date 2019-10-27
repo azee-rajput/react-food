@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import List from './list';
+import Ingredients from './ingredients';
 
 
 class Recipe extends Component{
@@ -41,14 +42,15 @@ class Recipe extends Component{
                 if(valu[i] === null || valu[i]===""){
                     break;
                 }
-                allIng.push(chabi[i])
+                allIng.push(valu[i])
+                allmeasure.push(valu[i+20])
             }
-            for(let i = 29; i < 51; i++){
-                if(valu[i] === null || valu[i]===""){
-                    break;
-                }
-                allmeasure.push(chabi[i])            
-            }
+            // for(let i = 29; i < 51; i++){
+            //     if(valu[i] === null || valu[i]===""){
+            //         break;
+            //     }
+            //     allmeasure.push(chabi[i])            
+            // }
             console.log(allIng);
             this.setState({ 
                 measuring : allmeasure,
@@ -56,8 +58,46 @@ class Recipe extends Component{
             })
         }
     }
+
+    tab() {
+        var counter = 0;
+        return(
+            <table className="table-borderless" cellPadding="10px" style={{margin:"auto"}}>
+                <thead>
+                    <tr>
+                        <th align="center">Ingredients</th>
+                        <th align="center">Measuring</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {this.state.ingredients.map((ing)=>(
+                        <tr>
+                            <td align="center">{ing}</td>
+                            <td align="center">{this.state.measuring[counter++]}</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
+        )
+        
+    }
     
     render(){
+        
+        // const ingredients = this.state.ingredients.map((ing)=>{
+        //     return(
+        //            <tr><td>{ing}</td></tr> 
+        //     )
+        // })
+
+        // const measuring = this.state.measuring.map((measure)=>{
+        //     return(
+        //            <tr><td>{measure}</td></tr>
+        //     )
+        // })
+
+
+
         return(
             <div style={{marginTop:"2%"}}>
 
@@ -69,20 +109,14 @@ class Recipe extends Component{
                     </h3>
 
                     <div className="col-sm-4 row mt-5">
-                        <h4 className = "col-sm-12"><b>Ingredients</b></h4>
-                        <div className="col-sm-12 row">
-                            <div className="text-center col-4">
-                                {this.state.measuring.map((measure)=>(
-                                    <p>{this.state.data[measure]}</p>
-                                ))}
-                            </div>
-
-                            <div className="text-center col-8">
-                                {this.state.ingredients.map((ingred)=>(
-                                    <p>{this.state.data[ingred]}</p>
-                                ))}
-                            </div>
+                        <div className = "col-sm-12"><h4 className="text-center"><b>Ingredients</b></h4>
+                            {this.tab()}                                    
                         </div>
+                        
+                            
+
+                            
+                                
                     </div>
 
                     <div className="col-sm-4 mt-5">
